@@ -20,7 +20,7 @@ const step = {
         j = 0;
         return Array(args.size).fill(action);
     }
-}
+};
 
 const action = {
     description: () => faker.lorem.sentence(),
