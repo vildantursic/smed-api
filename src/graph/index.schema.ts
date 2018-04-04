@@ -2,15 +2,25 @@ import { buildSchema } from 'graphql';
 
 export const schema = buildSchema(`
   type Query {
-    companies(size: Int!): [Company],
-  }
-  type Developer {
     name: String,
-    surname: String,
-    address: String,
+    products(size: Int!): [Product],
+    steps(size: Int!): [Step]
+  },
+  type Product {
+    name: String
+  },
+  type Step {
+    description: String,
+    order: String,
+    actions(size: Int!): [Action]
   }
-  type Company {
-    name: String,
-    developers(size: Int!): [Developer]
+  type Action {
+    description: String,
+    order: String,
+    image: Image,
+    type: String
+  }
+  type Image {
+    url: String
   }
 `);

@@ -1,16 +1,15 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const options = {
   useMongoClient: true,
-  autoIndex: false, // Don't build indexes
-  reconnectTries: Number.MAX_VALUE, // Never stop trying to reconnect
-  reconnectInterval: 500, // Reconnect every 500ms
-  poolSize: 10, // Maintain up to 10 socket connections
-  // If not connected, return errors immediately rather than waiting for reconnect
+  autoIndex: true,
+  reconnectTries: Number.MAX_VALUE,
+  reconnectInterval: 500,
+  poolSize: 10,
   bufferMaxEntries: 0
 };
 
-mongoose.connect('mongodb://localhost/example', options);
+mongoose.connect('mongodb://localhost/smed', options);
 
 const db = mongoose.connection;
 export default db;

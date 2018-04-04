@@ -20,9 +20,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 /**
  * ROUTES
  */
-const example = require('./routes/example/index');
+const product = require('./routes/product/index');
 
-app.use('/api/v1/', example);
+app.use('/api/v1/', product);
 
 app.use('/graphql', graphqlHTTP({
     schema: schema,
