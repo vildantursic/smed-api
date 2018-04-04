@@ -30,4 +30,4 @@ app.use('/graphql', graphqlHTTP({
     graphiql: true,
 }));
 
-app.listen(3000, () => console.log('W-API listening on port 3000!'));
+app.listen(3330, () => console.log('W-API listening on port 3330!'));
