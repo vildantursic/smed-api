@@ -14,6 +14,14 @@ const company = {
 };
 
 export const root = {
+    products: (args) => {
+        const product = faker.commerce.productName();
+
+        return Array(args.size).fill({
+            name: product,
+            sulug: product.toLowerCase()
+        });
+    },
     companies: (args) => {
         return Array(args.size).fill(company);
     },
