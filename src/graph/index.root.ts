@@ -1,7 +1,7 @@
 import faker from 'faker';
 import * as _ from 'lodash';
 
-const types = ['warning', 'info', 'error'];
+const types = ['improvement', 'info', 'error'];
 let i = 0;
 let j = 0;
 
