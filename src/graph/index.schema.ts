@@ -2,9 +2,7 @@ import { buildSchema } from 'graphql';
 
 export const schema = buildSchema(`
   type Query {
-    name: String,
-    products(size: Int!): [Product],
-    steps(size: Int!): [Step]
+    steps: [Step]
   },
   type Product {
     name: String
@@ -12,15 +10,12 @@ export const schema = buildSchema(`
   type Step {
     description: String,
     order: String,
-    actions(size: Int!): [Action]
+    actions: [Action]
   }
   type Action {
     description: String,
     order: String,
-    image: Image,
+    image: String,
     type: String
-  }
-  type Image {
-    url: String
   }
 `);
