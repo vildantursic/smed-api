@@ -10,6 +10,7 @@ export const schema = buildSchema(`
   type Step {
     description: String,
     order: String,
+    type: String,
     actions: [Action]
   }
   type Action {
